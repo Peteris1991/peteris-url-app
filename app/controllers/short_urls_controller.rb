@@ -1,5 +1,7 @@
 class ShortUrlsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_short_url, only: %i[ show edit update destroy ]
+
 
   # GET /short_urls or /short_urls.json
   def index
@@ -26,7 +28,7 @@ class ShortUrlsController < ApplicationController
 
     respond_to do |format|
       if @short_url.save
-        format.html { redirect_to @short_url, notice: "Short url was successfully created." }
+        format.html { redirect_to "http://[::1]:3000/short_urls", notice: "Short url was successfully created." }
         format.json { render :show, status: :created, location: @short_url }
       else
         format.html { render :new, status: :unprocessable_entity }
