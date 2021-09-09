@@ -5,14 +5,8 @@
   <hr class="my-4">
   <p>Create and save your favorit links up to 100!!!</p>
   <div class='container'>
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <button class="btn btn-outline-secondary" type="button">Create short link</button>
-      </div>
-      <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
-    </div>
+    <%= render 'short_urls/form' %>
   </div>
-  <%= render 'short_urls/form' %>
   <hr class="my-4">
 </div>
 <div class="container">

@@ -11,17 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :mini_url %>
-    <%= form.text_field :mini_url %>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <%= form.submit class: 'btn btn-outline-secondary' %>
+    </div>
+    <%= form.text_field :original_url, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :original_url %>
-    <%= form.text_area :original_url %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
