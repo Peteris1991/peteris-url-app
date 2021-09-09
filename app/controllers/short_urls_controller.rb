@@ -4,6 +4,7 @@ class ShortUrlsController < ApplicationController
   # GET /short_urls or /short_urls.json
   def index
     @short_urls = ShortUrl.all
+    @short_url = ShortUrl.new
   end
 
   # GET /short_urls/1 or /short_urls/1.json
