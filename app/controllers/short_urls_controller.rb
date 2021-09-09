@@ -28,7 +28,7 @@ class ShortUrlsController < ApplicationController
 
     respond_to do |format|
       if @short_url.save
-        format.html { redirect_to "http://[::1]:3000/short_urls", notice: "Short url was successfully created." }
+        format.html { redirect_to "https://peteris-url-app.herokuapp.com/short_urls", notice: "Short url was successfully created." }
         format.json { render :show, status: :created, location: @short_url }
       else
         format.html { render :new, status: :unprocessable_entity }
